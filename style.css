@@ -9,6 +9,7 @@
     max-width: 80%;
     margin: 0 auto;
 }
+
 .data-counter-content {
     margin: 50px 0px;
 }
@@ -44,14 +45,16 @@
     left: -16px;
     text-align: center;
 }
-.data-counter-content-2{
+
+
+.data-counter-content-two{
     margin-top: 20px;
 }
-.data-counter-content-2 ul{
-    position: absolute;
+.data-counter-content-two ul{
+    position: relative;
     counter-reset: number;
 }
-.data-counter-content-2 ul::before{
+.data-counter-content-two ul::before{
     content: '';
     width: 1px;
     height: calc(100% - 100px);
@@ -60,12 +63,13 @@
     top: 0;
     left: 0;
 }
-.data-counter-content-2 ul li {
+.data-counter-content-two ul li {
     margin-bottom: 50px;
     margin-left: 50px;
+    text-align: justify;
     position: relative;
 }
-.data-counter-content-2 ul li::before {
+.data-counter-content-two ul li::before {
     counter-increment: number;
     content: counters(number, ".");
     position: absolute;
