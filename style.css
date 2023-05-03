@@ -1,0 +1,81 @@
+*{
+    margin: 0;
+    padding: 0;
+    text-decoration: none;
+    list-style: none;
+    box-sizing: border-box;
+}
+.max-width{
+    max-width: 80%;
+    margin: 0 auto;
+}
+.data-counter-content {
+    margin: 50px 0px;
+}
+.data-counter-content ul{
+    position: relative;
+}
+.data-counter-content ul::before{
+    content: '';
+    position: absolute;
+    width: 1px;
+    height: calc(100% - 100px);
+    background: red;
+    top: 0;
+    left: 0;
+}
+.data-counter-content ul li {
+    padding-bottom: 30px;
+    text-align: justify;
+    position: relative;
+    padding-left: 50px;
+}
+.data-counter-content ul li::before{
+    content: attr(data-counter);
+    position: absolute;
+    display: inline-block;
+    width: 30px;
+    height: 30px;
+    background: #ddd;
+    border: 1px solid red;
+    border-radius: 50%;
+    line-height: 30px;
+    top: 0;
+    left: -16px;
+    text-align: center;
+}
+.data-counter-content-2{
+    margin-top: 20px;
+}
+.data-counter-content-2 ul{
+    position: absolute;
+    counter-reset: number;
+}
+.data-counter-content-2 ul::before{
+    content: '';
+    width: 1px;
+    height: calc(100% - 100px);
+    background: red;
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+.data-counter-content-2 ul li {
+    margin-bottom: 50px;
+    margin-left: 50px;
+    position: relative;
+}
+.data-counter-content-2 ul li::before {
+    counter-increment: number;
+    content: counters(number, ".");
+    position: absolute;
+    width: 30px;
+    height: 30px;
+    background: #ddd;
+    border: 1px solid red;
+    border-radius: 50%;
+    top: 0;
+    left: -67px;
+    text-align: center;
+    line-height: 30px;
+}
